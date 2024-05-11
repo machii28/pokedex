@@ -1,3 +1,4 @@
+// @ts-ignore
 import {Key, useEffect, useState} from "react";
 import {useRouter} from "next/router";
 import Link from "next/link";
@@ -5,7 +6,6 @@ import Link from "next/link";
 export default function PokemonDetails() {
   const router = useRouter();
   const {pokemon} = router.query;
-  // @ts-ignore
   const [pokemonDetails, setPokemonDetails] = useState<any[]>(null);
 
   useEffect(() => {
@@ -32,7 +32,6 @@ export default function PokemonDetails() {
     return <div>No details found for {pokemon}</div>;
   }
 
-  // @ts-ignore
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <div className="bg-white p-8 rounded-lg shadow-md mb-4">
