@@ -5,6 +5,7 @@ import Link from "next/link";
 export default function PokemonDetails() {
   const router = useRouter();
   const {pokemon} = router.query;
+  // @ts-ignore
   const [pokemonDetails, setPokemonDetails] = useState<any[]>(null);
 
   useEffect(() => {
