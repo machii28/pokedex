@@ -31,6 +31,7 @@ export default function PokemonDetails() {
     return <div>No details found for {pokemon}</div>;
   }
 
+  // @ts-ignore
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <div className="bg-white p-8 rounded-lg shadow-md mb-4">
