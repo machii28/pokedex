@@ -2,6 +2,7 @@
 import {Key, useEffect, useState} from "react";
 import {useRouter} from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function PokemonDetails() {
   const router = useRouter();
@@ -36,7 +37,7 @@ export default function PokemonDetails() {
     <div className="flex flex-col items-center justify-center h-screen">
       <div className="bg-white p-8 rounded-lg shadow-md mb-4">
         <h1 className="text-2xl font-bold mb-4 text-center">{pokemonDetails.name.toUpperCase()}</h1>
-        <img
+        <Image
           src={`https://img.pokemondb.net/sprites/home/normal/${pokemonDetails.name}.png`}
           alt={`${pokemonDetails.name} sprite`}
           className="mx-auto mb-4"

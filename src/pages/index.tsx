@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const [pokemonData, setPokemonData] = useState<any[]>([]);
@@ -63,7 +64,7 @@ export default function Home() {
               href={`/pokemon/${pokemon.name}`} // Dynamically generate URL
               className="bg-white rounded-lg shadow-md overflow-hidden"
             >
-              <img src={`https://img.pokemondb.net/sprites/home/normal/${pokemon.name}.png`} alt="Placeholder Image"
+              <Image src={`https://img.pokemondb.net/sprites/home/normal/${pokemon.name}.png`} alt="Placeholder Image"
                    className="w-full"/>
               <div className="p-4">
                 <h3 className="text-xl text-center font-medium mb-2">{pokemon.name.toUpperCase()}</h3>
