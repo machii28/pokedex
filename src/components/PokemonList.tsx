@@ -21,12 +21,21 @@ export default function PokemonList() {
     }
   }
 
+  const handleLoadMore = () => {
+    setOffset((prevState) => prevState + 50);
+  }
+
   return (
     <div className="container mx-auto py-8">
       <div className="p-1 flex flex-wrap items-center justify-center">
         {pokemonData.map((pokemon, index) => (
           <PokemonCard key={index} pokemon={pokemon} />
         ))}
+      </div>
+      <div className="text-center mt-4">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleLoadMore}>
+          Load More
+        </button>
       </div>
     </div>
   );

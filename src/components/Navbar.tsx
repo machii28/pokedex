@@ -22,6 +22,8 @@ export default function Navbar() {
       </div>
       <div className="hidden lg:flex lg:flex-1 lg:gap-x-12 lg:justify-end">
         <Link href="#" className="text-sm font-semibold leading-6 text-gray-900">Pokedex</Link>
+        <Link href="#" className="text-sm font-semibold leading-6 text-gray-900">Team Builder</Link>
+        <Link href="#" className="text-sm font-semibold leading-6 text-gray-900">Type Chart</Link>
       </div>
     </nav>
   );
