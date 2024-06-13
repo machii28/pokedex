@@ -1,5 +1,5 @@
 import {useRouter} from "next/router";
-import {useEffect, useState} from "react";
+import {Key, useEffect, useState} from "react";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
@@ -143,7 +143,10 @@ const Pokemon = () => {
             Abilities:
           </p>
           <ul className='ml-3'>
-            {pokemonDetails.abilities.map((ability, index) => (
+            {pokemonDetails.abilities.map((ability: {
+              is_hidden: boolean;
+              ability: any;
+            }, index: Key | null | undefined) => (
               <li key={index}>
                 {ability.ability.name.toUpperCase()} {
                 ability.is_hidden
