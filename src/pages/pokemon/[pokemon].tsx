@@ -111,7 +111,11 @@ const Pokemon = () => {
           </div>
 
           <div className="flex justify-center my-3">
-            {pokemonDetails.types.map((type, index) => (
+            {pokemonDetails.types.map((type: {
+              type: {
+                name: string
+              };
+            }, index: Key | null | undefined) => (
               <span
                 key={index}
                 className="inline-block px-3 py-1 mr-2 rounded-full text-lg border-white border"
